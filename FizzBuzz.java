@@ -15,7 +15,6 @@ public class FizzBuzz {
                     break;
                 }
                 value = Integer.parseInt(result);
-                values.add(value);
                 if (value % 3 == 0 && value % 5 == 0) {
                     System.out.println("FizzBuzz\n");
                 } else if (value % 3 == 0) {
