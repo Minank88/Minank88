@@ -9,12 +9,16 @@ public class FizzBuzz {
         ArrayList values = new ArrayList();
         int value = 0;
         while (true) {
+            String result = input.nextLine();
+            if (result.equals("exit")) {
+                break;
+            }
+            values.add(result);
+        }
+
+        for (int i = 0; i < values.size(); i++) {
             try {
-                String result = input.nextLine();
-                if (result.equals("exit")) {
-                    break;
-                }
-                value = Integer.parseInt(result);
+                value = Integer.parseInt(String.valueOf(values.get(i)));
                 if (value % 3 == 0 && value % 5 == 0) {
                     System.out.println("FizzBuzz\n");
                 } else if (value % 3 == 0) {
@@ -31,6 +35,8 @@ public class FizzBuzz {
         }
     }
 }
+
+
 
 
 
